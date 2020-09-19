@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {Container,Grid,Typography,Card,CardActionArea,CardMedia,CardContent,CardActions,Button,makeStyles,} from "@material-ui/core";
+import {Container,makeStyles,} from "@material-ui/core";
 import Comment from './Comment';
+import './Post.css';
 
 
 const useStyles = makeStyles({
@@ -38,35 +39,23 @@ const Post = () => {
   };
 
   return (
-    <Container style={{ marginTop: "30px" }} maxWidth="sm">
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Card style={{ textAlign: "left" }}>
-            <CardMedia
-              className={classes.media}
-              image={`https://loremflickr.com/600/400?random=${id}`}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {post.title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {post.body}
-              </Typography>
-            </CardContent>
-
-            <CardContent>
-              <Typography variant="h5" gutterBottom>
-                All Comments:
-              </Typography>
-              {comments.map((comment) => (
-                <Comment key={comment.id} comment={comment} />
-              ))}
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+    
+    <Container>
+     <div className='single-image'>
+      <img src={`https://loremflickr.com/600/400?random=${id}`} alt=""/>
+     </div>
+      <div post-section>
+        <h1>{post.title}</h1>
+        <p>{post.body}</p>
+      </div>
+      <div className='comment'>
+        <h2 style={{marginTop: '10px', marginBottom: '20px'}}>Comments Section:</h2>
+      
+        {
+          comments.map((comment) => (<Comment key={comment.id} comment={comment} /> ))
+        }
+ 
+      </div>
     </Container>
   );
 };

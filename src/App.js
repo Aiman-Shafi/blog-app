@@ -10,7 +10,6 @@ function App() {
       <BrowserRouter>
           <Header></Header>
       </BrowserRouter>
-      
     </div>
   );
 }

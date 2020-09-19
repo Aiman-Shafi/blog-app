@@ -1,0 +1,17 @@
+.comment-section{
+    display: flex;
+    width: 900px;
+    padding-bottom: 2rem;
+}
+
+.single-image img{
+
+    width: 48%;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: #dcd3d3 0px 3px 17px 1px;
+} 
+
+.comments{
+    padding-left: 1rem;
+}

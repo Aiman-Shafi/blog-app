@@ -66,9 +66,9 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar>
+      <AppBar style={{backgroundColor: "#580b0b"}}>
         <Toolbar>
-          <Link to="/" style={{ color: "white", textDecoration: "none", textAlign: 'center' }}>
+          <Link to="/" style={{ color: "white", textDecoration: "none",}}>
             <Typography variant="h4">HeyBlog</Typography>
           </Link>
         </Toolbar>
